@@ -140,3 +140,16 @@ table {
     collapse: collapse;
     border-spacing: 0;
 }
+
+/* remove animations for people who turned them off */
+@media (prefers-reduced-motion: reduce) {
+
+    *,
+    *::before,
+    *::after {
+        animation-duration: 0.01ms !important;
+        animation-iteration-count: 1 !important;
+        transition-duration: 0.1ms !important;
+        scroll-behavior: auto !important;
+    }
+}
