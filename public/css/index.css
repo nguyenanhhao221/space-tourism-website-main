@@ -1,70 +1,228 @@
 /* --- */
+/* Font */
+/* --- */
+@import url('https://fonts.googleapis.com/css2?family=Barlow+Condensed:wght@400;700&family=Bellefair&display=swap');
+
+/* --- */
 /* Custom properties */
 /* --- */
 
 :root {
-    --clr-dark: 230 35% 7%;
-    --clr-light: 231 77% 90%;
-    --clr-white: 0 0% 100%;
+  /* Colors */
+  --clr-dark: 230 35% 7%;
+  --clr-light: 231 77% 90%;
+  --clr-white: 0 0% 100%;
+
+  /* Font sizes */
+  --fs-900: 9.375rem;
+  --fs-800: 6.25rem;
+  --fs-700: 3.5rem;
+  --fs-600: 2rem;
+  --fs-500: 1.75rem;
+  --fs-400: 1.125rem;
+  --fs-300: 1rem;
+  --fs-300: 0.875rem;
+
+  /* Font family */
+  --ff-serif: 'Bellefair', serif;
+  --ff-sans-cond: 'Barlow Condensed', sans-serif;
+  --ff-sans-normal: 'Barlow', serif;
+}
+/* Make img easier to work with */
+img,
+picture {
+  display: block;
+  max-width: 100%;
+}
+/* Set up body */
+body {
+  /* line-height: 1.5; */
+  font-family: var(--ff-sans-normal);
+  min-height: 100vh;
+  font-size: var(--fs-400);
+  background-color: hsl(var(--clr-dark));
+  color: hsl(var(--clr-white));
 }
 
+/* Set up headers weight because the font we use don't have bold weight, so css might make h1 bold and  */
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  font-weight: 400;
+}
 
 /* --- */
 /* Utilities classes */
 /* --- */
 .flex {
-    display: flex;
-    gap: var(--gap, 1rem);
+  display: flex;
+  gap: var(--gap, 1rem);
 }
 
 .flex-col {
-    flex-direction: column;
+  flex-direction: column;
 }
 
 .grid {
-    display: grid;
-    gap: var(--gap, 1rem);
+  display: grid;
+  gap: var(--gap, 1rem);
 }
 
 .container {
-    padding: 0 2rem;
-    margin: 0 auto;
+  padding: 0 2rem;
+  margin: 0 auto;
 }
 
 /* support visibly impair screen reader users */
 .sr-only {
-    position: absolute;
-    width: 1px;
-    height: 1px;
-    padding: 0;
-    margin: -1px;
-    overflow: hidden;
-    clip: rect(0, 0, 0, 0);
-    white-space: nowrap;
-    border: 0;
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  padding: 0;
+  margin: -1px;
+  overflow: hidden;
+  clip: rect(0, 0, 0, 0);
+  white-space: nowrap;
+  border: 0;
 }
 
 /* Colors */
 .bg-dark {
-    background-color: hsl(var(--clr-dark));
+  background-color: hsl(var(--clr-dark));
 }
 
 .bg-accent {
-    background-color: hsl(var(--clr-light));
+  background-color: hsl(var(--clr-light));
 }
 
 .bg-white {
-    background-color: hsl(var(--clr-white));
+  background-color: hsl(var(--clr-white));
 }
 
 .text-dark {
-    color: hsl(var(--clr-dark));
+  color: hsl(var(--clr-dark));
 }
 
 .text-accent {
-    color: hsl(var(--clr-accent));
+  color: hsl(var(--clr-light));
 }
 
 .text-white {
-    color: hsl(var(--clr-white));
+  color: hsl(var(--clr-white));
+}
+
+/* Typography */
+.ff-serif {
+  font-family: var(--ff-serif);
+}
+
+.ff-sans-cond {
+  font-family: var(--ff-sans-cond);
+}
+
+.ff-sans-normal {
+  font-family: var(--ff-sans-normal);
+}
+
+.fs-400 {
+  font-size: var(--fs-400);
+}
+
+.fs-500 {
+  font-size: var(--fs-500);
+}
+
+.fs-600 {
+  font-size: var(--fs-600);
+}
+
+.fs-700 {
+  font-size: var(--fs-700);
+}
+
+.fs-800 {
+  font-size: var(--fs-800);
+}
+
+.fs-900 {
+  font-size: var(--fs-900);
+}
+
+.letter-spacing-1 {
+  letter-spacing: 4.72px;
+}
+.letter-spacing-2 {
+  letter-spacing: 2.7px;
+}
+.letter-spacing-3 {
+  letter-spacing: 2px;
+}
+
+.upper-case {
+  text-transform: uppercase;
+}
+.numbered-title {
+  font-family: var(--ff-sans-cond);
+  text-transform: uppercase;
+  letter-spacing: 2.7px;
+  font-size: var(--fs-400);
+  font-weight: 400;
+}
+
+.numbered-title > span {
+  font-weight: 700;
+  margin-right: 0.75rem;
+}
+
+.active {
+  border-bottom: 3px solid hsl(var(--clr-white));
+}
+/* Homepage */
+/* Navbar */
+
+nav ul li {
+  padding: 2rem;
+  cursor: pointer;
+}
+
+nav ul li:hover,
+nav ul li:focus {
+  border-bottom: 3px solid hsl(var(--clr-white) / 0.25);
+}
+/* Components */
+/* large button */
+.large-button {
+  text-transform: uppercase;
+  letter-spacing: 2px;
+  background-color: hsl(var(--clr-white));
+  color: hsl(var(--clr-dark));
+  border-radius: 50%;
+  font-family: var(--ff-serif);
+  font-size: var(--fs-600);
+  padding: 0 2rem;
+  display: inline-grid;
+  place-items: center;
+  aspect-ratio: 1;
+  position: relative;
+  z-index: 1;
+}
+.large-button::after {
+  content: '';
+  background-color: hsl(var(--clr-white) / 0.15);
+  position: absolute;
+  height: 100%;
+  width: 100%;
+  z-index: -1;
+  border-radius: 50%;
+  transition: opacity 0.5s linear, transform 0.75s ease-in-out;
+  opacity: 1;
+}
+/* Effect when hover */
+.large-button:hover:after,
+.large-button:focus:after {
+  opacity: 1;
+  transform: scale(1.5);
 }
