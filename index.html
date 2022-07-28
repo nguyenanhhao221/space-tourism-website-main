@@ -12,66 +12,73 @@
     />
     <link rel="stylesheet" href="./public/css/reset.css" />
     <link rel="stylesheet" href="./public/css/index.css" />
+    <script defer src="./js/index.js"></script>
     <title>Space tourism website</title>
   </head>
 
-  <body>
-    <div class="body-container">
-      <header>
-        <div>
-          <img
-            src="./assets/shared/logo.svg"
-            alt="Space tourism logo"
-            class="logo"
-          />
-        </div>
-        <nav>
-          <ul class="flex">
-            <li class="active">
-              <a class="numbered-title" href="index.html">
-                <span>00</span>Home
-              </a>
-            </li>
+  <body class="home-body">
+    <header class="primary-header flex">
+      <div>
+        <img
+          src="./assets/shared/logo.svg"
+          alt="Space tourism logo"
+          class="logo"
+        />
+      </div>
+      <button
+        class="mobile-nav-toggle"
+        aria-controls="primary-navigation"
+        type="button"
+        aria-expanded="false"
+      >
+        <span class="sr-only">Menu</span>
+      </button>
+      <nav
+        class="primary-navigation"
+        data-visible="false"
+        id="primary-navigation"
+      >
+        <ul class="flex">
+          <li class="active">
+            <a class="numbered-title" href="index.html">
+              <span>00</span>Home
+            </a>
+          </li>
 
-            <li>
-              <a class="numbered-title" href="index.html">
-                <span>01</span>Destination
-              </a>
-            </li>
+          <li>
+            <a class="numbered-title" href="index.html">
+              <span>01</span>Destination
+            </a>
+          </li>
 
-            <li>
-              <a class="numbered-title" href="crew.html">
-                <span>02</span>Crew
-              </a>
-            </li>
+          <li>
+            <a class="numbered-title" href="crew.html"> <span>02</span>Crew </a>
+          </li>
 
-            <li>
-              <a class="numbered-title" href="technology.html">
-                <span>03</span>Technology
-              </a>
-            </li>
-          </ul>
-        </nav>
-      </header>
-      <section class="hero">
-        <div class="hero-text">
-          <p
-            class="fs-500 ff-sans-cond letter-spacing-1 upper-case text-accent"
-          >
-            So, you want to travel to
-          </p>
-          <h1 class="fs-900 upper-case text-white">space</h1>
-          <p class="ff-sans-normal letter-spacing-2 text-accent">
-            Let’s face it; if you want to go to space, you might as well
-            genuinely go to outer space and not hover kind of on the edge of it.
-            Well sit back, and relax because we’ll give you a truly out of this
-            world experience!
-          </p>
-        </div>
-        <div class="CTA">
-          <a href="#" class="large-button">Explore</a>
-        </div>
-      </section>
+          <li>
+            <a class="numbered-title" href="technology.html">
+              <span>03</span>Technology
+            </a>
+          </li>
+        </ul>
+      </nav>
+    </header>
+    <div class="grid-container grid-container--home">
+      <div class="hero-text">
+        <h1 class="fs-500 ff-sans-cond letter-spacing-1 upper-case text-accent">
+          So, you want to travel to
+        </h1>
+        <span class="text-white fs-900 ff-serif upper-case">space</span>
+        <p class="ff-sans-normal text-accent">
+          Let’s face it; if you want to go to space, you might as well genuinely
+          go to outer space and not hover kind of on the edge of it. Well sit
+          back, and relax because we’ll give you a truly out of this world
+          experience!
+        </p>
+      </div>
+      <div class="CTA">
+        <a href="#" class="large-button">Explore</a>
+      </div>
     </div>
   </body>
 </html>
