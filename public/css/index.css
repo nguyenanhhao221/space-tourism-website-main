@@ -259,6 +259,7 @@ h6 {
 .numbered-title > span {
   font-weight: 700;
   margin-right: 0.75rem;
+  color: hsl(var(--clr-white) / 0.25);
 }
 
 .active {
@@ -319,6 +320,10 @@ nav {
   background: hsl(var(--clr-dark) / 0.95);
   gap: clamp(1.5rem, 5vw, 3rem);
 }
+.primary-navigation ul li a span {
+  color: hsl(var(--clr-white));
+}
+
 @supports (backdrop-filter: blur(1.5rem)) {
   .primary-navigation {
     background: hsl(var(--clr-white) / 0.05);
