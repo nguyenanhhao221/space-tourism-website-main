@@ -15,7 +15,7 @@
     <script defer src="./js/index.js"></script>
     <title>Space tourism website</title>
   </head>
-  <body>
+  <body class="destination-body">
     <header class="primary-header flex">
       <div>
         <img
@@ -33,18 +33,18 @@
         <span class="sr-only">Menu</span>
       </button>
       <nav
-        class="primary-navigation"
+        class="primary-navigation flex"
         data-visible="false"
         id="primary-navigation"
       >
-        <ul class="flex">
-          <li class="active">
+        <ul class="flex underline-indicators">
+          <li>
             <a class="numbered-title" href="index.html">
               <span aria-hidden="true">00</span>Home
             </a>
           </li>
 
-          <li>
+          <li class="active">
             <a class="numbered-title" href="index.html">
               <span aria-hidden="true">01</span>Destination
             </a>
@@ -64,14 +64,65 @@
         </ul>
       </nav>
     </header>
-    <main class="grid-container-xxxx grid-container--destination">
-      <h1 class="numbered-title"><span>01</span> Pick your destination</h1>
+    <main class="grid-container grid-container--destination">
+      <h1 class="numbered-title">
+        <span aria-hidden="true">01</span> Pick your destination
+      </h1>
+      <img src="./assets/destination/image-moon.png" alt="The moon" />
+      <div class="tab-list underline-indicators flex">
+        <button
+          type="button"
+          class="upper-case ff-sans-cond text-accent bg-dark letter-spacing-2 active"
+        >
+          Moon
+        </button>
+        <button
+          type="button"
+          class="upper-case ff-sans-cond text-accent bg-dark letter-spacing-2"
+        >
+          Mars
+        </button>
+        <button
+          type="button"
+          class="upper-case ff-sans-cond text-accent bg-dark letter-spacing-2"
+        >
+          Europa
+        </button>
+        <button
+          type="button"
+          class="upper-case ff-sans-cond text-accent bg-dark letter-spacing-2"
+        >
+          Titan
+        </button>
+      </div>
 
-      Moon Mars Europa Titan Moon See our planet as you’ve never seen it before.
-      A perfect relaxing trip away to help regain perspective and come back
-      refreshed. While you’re there, take in some history by visiting the Luna 2
-      and Apollo 11 landing sites. Avg. distance 384,400 km Est. travel time 3
-      days
+      <article class="text-center flex">
+        <div>
+          <h2 class="ff-serif upper-case fs-800 text-white">Moon</h2>
+          <p class="text-accent">
+            See our planet as you’ve never seen it before. A perfect relaxing
+            trip away to help regain perspective and come back refreshed. While
+            you’re there, take in some history by visiting the Luna 2 and Apollo
+            11 landing sites.
+          </p>
+        </div>
+        <div class="destination-meta">
+          <h3
+            class="text-accent letter-spacing-2 upper-case ff-sans-cond fs-200"
+          >
+            Avg. distance
+          </h3>
+          <p class="upper-case fs-750 ff-serif">384,400 km</p>
+        </div>
+        <div>
+          <h3
+            class="text-accent letter-spacing-2 upper-case ff-sans-cond fs-200"
+          >
+            Est. travel time
+          </h3>
+          <p class="upper-case fs-750 ff-serif">3 days</p>
+        </div>
+      </article>
     </main>
   </body>
 </html>
