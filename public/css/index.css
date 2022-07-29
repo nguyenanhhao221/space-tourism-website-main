@@ -416,7 +416,7 @@ nav ul li {
   }
 
   .primary-navigation ul {
-    padding: 0 3rem;
+    padding: 0 clamp(2.5rem, 4vw, 7.6rem);
   }
 
   nav ul li:hover,
