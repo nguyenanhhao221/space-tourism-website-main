@@ -432,12 +432,16 @@ nav ul li {
 }
 /* desktop */
 @media screen and (min-width: 45rem) {
+  header {
+    margin-top: 2rem;
+  }
   .home-body {
     background-image: url('../../assets/home/background-home-desktop.jpg');
   }
   nav ul li a span {
     display: inline;
   }
+  /* set up the line through the nav only in desktop */
   .primary-header::after {
     content: '';
     display: block;
@@ -452,5 +456,4 @@ nav ul li {
   .primary-navigation {
     order: 2;
   }
-  /* set up the line through the nav only in desktop */
 }
