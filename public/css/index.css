@@ -131,7 +131,7 @@ h6 {
 .grid-container {
   display: grid;
   place-items: center;
-  text-align: center;
+  /* text-align: center; */
   column-gap: var(--column-gap, 2rem);
   /* padding: 0 2rem; */
 }
@@ -529,4 +529,20 @@ article h3 {
 .destination-meta {
   border-top: 1px solid hsl(var(--clr-blue));
   padding-top: 2rem;
+  flex-direction: column;
+}
+
+@media screen and (min-width: 35rem) {
+  .destination-meta {
+    flex-direction: row;
+    justify-content: space-around;
+  }
+
+  .grid-container--destination > *:first-child {
+    justify-self: start;
+  }
+
+  article {
+    padding: 0 4rem;
+  }
 }
