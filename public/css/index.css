@@ -51,7 +51,7 @@
     --fs-600: 1.5rem;
     --fs-500: 1.25rem;
     --fs-400: 1rem;
-
+    --fs-200: 1rem;
     /* Line height */
     --lh: 28px;
   }
@@ -66,6 +66,7 @@
     --fs-600: 2rem;
     --fs-500: 1.75rem;
     --fs-400: 1.125rem;
+    --fs-200: 1rem;
     /* Line height */
     --lh: 32px;
   }
@@ -311,7 +312,7 @@ h6 {
   padding: var(--underline-gap, 0.5rem) 0;
   border: 0;
   border-bottom: 0.2rem solid hsl(var(--clr-white) / 0);
-  /* background-color: transparent; */
+  background-color: transparent;
 }
 
 .underline-indicators > *:hover,
@@ -532,7 +533,9 @@ nav ul li {
 .grid-container--destination > .destination-info {
   grid-area: content;
 }
-
+.tab-list button {
+  font-size: var(--fs-200);
+}
 /* article */
 article {
   flex-direction: column;
