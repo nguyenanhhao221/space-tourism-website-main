@@ -574,5 +574,23 @@ article h3 {
       '. title title .'
       '. image tabs .'
       '. image content .';
+    place-items: start;
+  }
+
+  .grid-container--destination > img {
+    max-width: 100%;
+  }
+  .destination-info {
+    text-align: left;
+    padding: 0;
+  }
+
+  .destination-meta {
+    justify-content: start;
+    gap: 8rem;
+  }
+
+  h1.numbered-title {
+    font-size: var(--fs-750);
   }
 }
