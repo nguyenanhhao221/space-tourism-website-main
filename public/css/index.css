@@ -545,7 +545,7 @@ nav ul li {
 /* article */
 article {
   flex-direction: column;
-  --gap: 2rem;
+  /* --gap: 2rem; */
 }
 
 article h3 {
@@ -580,7 +580,8 @@ article h3 {
       '. title title .'
       '. image tabs .'
       '. image content .';
-    place-items: start;
+    align-content: start;
+    justify-items: start;
   }
 
   .grid-container--destination > img {
@@ -593,7 +594,7 @@ article h3 {
 
   .destination-meta {
     justify-content: start;
-    gap: 8rem;
+    gap: min(4vw, 6rem);
   }
 
   h1.numbered-title {
