@@ -412,7 +412,6 @@ nav {
 
   .primary-navigation[data-visible='true'] {
     transform: translateX(0%);
-    /* display: block; */
   }
 
   .mobile-nav-toggle[aria-expanded='true'] {
@@ -548,7 +547,6 @@ nav ul li {
 /* article */
 article {
   flex-direction: column;
-  /* --gap: 2rem; */
 }
 
 article h3 {
