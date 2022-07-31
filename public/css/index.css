@@ -356,12 +356,15 @@ nav {
   color: hsl(var(--clr-white));
 }
 
-@supports (backdrop-filter: blur(1.5rem)) {
+@supports (backdrop-filter: blur(1.5rem)) or
+  (-webkit-backdrop-filter: blur(1.5rem)) {
   .primary-navigation {
     background: hsl(var(--clr-white) / 0.05);
+    -webkit-backdrop-filter: blur(1.5rem);
     backdrop-filter: blur(1.5rem);
   }
 }
+
 /* settings specific for mobile nav */
 @media screen and (max-width: 35rem) {
   .primary-navigation {
