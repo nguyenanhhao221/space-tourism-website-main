@@ -451,14 +451,14 @@ nav ul li {
 }
 
 /* tablet */
-@media screen and (min-width: 35rem) {
+@media screen and (min-width: 34.9999rem) {
   .home-body {
     background-image: url('../../assets/home/background-home-tablet.jpg');
     background-position: bottom center;
   }
 
   .primary-navigation {
-    padding: 0 clamp(2rem, 4vw, 7.6rem);
+    padding: 0 clamp(0rem, 3vw, 7.6rem);
   }
 
   nav ul li a span {
