@@ -1,3 +1,21 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+    <link
+      rel="icon"
+      type="image/png"
+      sizes="32x32"
+      href="./assets/favicon-32x32.png"
+    />
+    <link rel="stylesheet" href="./public/css/reset.css" />
+    <link rel="stylesheet" href="./public/css/index.css" />
+    <script defer src="./js/index.js"></script>
+    <title>Space tourism website</title>
+  </head>
+  <body class="crew-body">
     <header class="primary-header flex">
       <div>
         <img
@@ -27,7 +45,7 @@
           </li>
 
           <li>
-            <a class="numbered-title" href="destination-moon.html">
+            <a class="numbered-title" href="destination.html">
               <span aria-hidden="true">01</span>Destination
             </a>
           </li>
@@ -46,3 +64,42 @@
         </ul>
       </nav>
     </header>
+    <main class="grid-container grid-container--crew">
+      <h1 class="numbered-title">
+        <span aria-hidden="true">02</span>Meet your crew
+      </h1>
+      <div class="dot-indicators flex">
+        <button type="button" selected="true">
+          <span class="sr-only">Slide title</span>
+        </button>
+        <button type="button" selected="false">
+          <span class="sr-only">Slide title</span>
+        </button>
+        <button type="button" selected="false">
+          <span class="sr-only">Slide title</span>
+        </button>
+        <button type="button" selected="false">
+          <span class="sr-only">Slide title</span>
+        </button>
+      </div>
+      <article class="text-center crew-info flex">
+        <div class="crew-meta flex">
+          <h3 class="ff-serif upper-case fs-600">Commander</h3>
+          <h2 class="ff-serif upper-case fs-700 text-white">Douglas Hurley</h2>
+          <p class="ff-sans-normal text-accent mw-50ch">
+            Douglas Hurley Douglas Gerald Hurley is an American engineer, former
+            Marine Corps pilot and former NASA astronaut. He launched into space
+            for the third time as commander of Crew Dragon Demo-2.
+          </p>
+        </div>
+      </article>
+      <picture id="commander-image">
+        <source
+          srcset="assets/crew/image-douglas-hurley.webp"
+          type="image/webp"
+        />
+        <img src="assets/crew/image-douglas-hurley.png" alt="Douglas Hurley" />
+      </picture>
+    </main>
+  </body>
+</html>
