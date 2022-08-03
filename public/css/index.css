@@ -361,7 +361,34 @@ h6 {
   --gap: 1rem;
   justify-content: center;
 }
+/* Number Tabs */
+.numbered-list > * {
+  cursor: pointer;
+  border-radius: 50%;
+  font-size: var(--fs-600);
+  border: 1px solid hsl(var(--clr-white) / 0.5);
+  width: 2.5rem;
+  aspect-ratio: 1;
+  background-color: transparent;
+}
+.numbered-list > * span {
+  color: hsl(var(--clr-white));
+}
+.numbered-list {
+  --gap: 1rem;
+}
 
+.numbered-list > .active {
+  background-color: hsl(var(--clr-white));
+}
+.numbered-list > .active span {
+  color: hsl(var(--clr-dark));
+}
+
+.numbered-list > *:hover,
+.numbered-list > *:focus {
+  border: 1px solid hsl(var(--clr-white));
+}
 /* ---------- */
 /* Homepage */
 /* ---------- */
@@ -731,5 +758,67 @@ article h3 {
   .dot-indicators > * {
     width: 15px;
     height: 15px;
+  }
+}
+
+/* --- */
+/* Technology page */
+/* --- */
+.technology-body {
+  background-image: url(../../assets/technology/background-technology-mobile.jpg);
+}
+.grid-container--technology {
+  grid-template-areas:
+    'title'
+    'image'
+    'tabs'
+    'content';
+}
+.grid-container--technology {
+  padding-inline: 0;
+}
+.grid-container--technology > *:not(:last-child) {
+  padding-inline: 2rem;
+}
+.grid-container--technology > .numbered-title {
+  margin-bottom: 2rem;
+}
+
+.grid-container--technology .dot-indicators {
+  margin-top: 2rem;
+  margin-bottom: 1.5rem;
+}
+.grid-container--technology > picture img {
+  max-width: 100%;
+  grid-area: image;
+}
+
+.technology-info {
+  grid-area: content;
+}
+.technology-info .technology-meta {
+  flex-direction: column;
+  --gap: 0;
+}
+.numbered-list {
+  grid-area: tabs;
+  margin-top: 2rem;
+  margin-bottom: 1.5rem;
+}
+
+.technology-info .technology-meta h2 {
+  margin-bottom: 1rem;
+}
+.technology-info .technology-meta h3 {
+  letter-spacing: 2.36px;
+}
+/* tablet */
+@media screen and (min-width: 35rem) {
+  .crew-body {
+    background-image: url(../../assets/technology/background-technology-tablet.jpg);
+  }
+  .numbered-list {
+    margin-top: 3.5rem;
+    margin-bottom: 2.75rem;
   }
 }
