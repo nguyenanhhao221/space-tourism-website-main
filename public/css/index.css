@@ -134,11 +134,14 @@ h6 {
   place-items: center;
   text-align: center;
   column-gap: var(--column-gap, 2rem);
-  padding: 0 1.5rem;
+  padding-inline: 1.5rem;
   padding-bottom: 4rem;
 }
 .mw-50ch {
   max-width: 50ch;
+}
+.hidden {
+  display: none;
 }
 @media screen and (min-width: 45rem) {
   .grid-container {
@@ -147,7 +150,7 @@ h6 {
         1fr
       );
     text-align: left;
-    padding: 0 1.5rem;
+    padding-inline: 1.5rem;
   }
 
   .grid-container > *:first-child {
@@ -727,9 +730,6 @@ article h3 {
   .crew-body {
     background-image: url(../../assets/crew/background-crew-desktop.jpg);
   }
-  .grid-container {
-    padding-bottom: 0;
-  }
   .grid-container--crew {
     grid-template-columns: minmax(1rem, 1fr) minmax(0, 37rem) minmax(0, 23rem) minmax(
         1rem,
@@ -788,8 +788,7 @@ article h3 {
   margin-top: 2rem;
   margin-bottom: 1.5rem;
 }
-.grid-container--technology > picture img {
-  max-width: 100%;
+.grid-container--technology > picture {
   grid-area: image;
 }
 
@@ -820,5 +819,62 @@ article h3 {
   .numbered-list {
     margin-top: 3.5rem;
     margin-bottom: 2.75rem;
+  }
+  .grid-container--technology > picture,
+  .grid-container--technology > picture > img {
+    min-width: 100%;
+  }
+}
+
+@media screen and (min-width: 45rem) {
+  .crew-body {
+    background-image: url(../../assets/technology/background-technology-desktop.jpg);
+  }
+  .technology-image-mobile {
+    display: none;
+  }
+  .technology-image-desktop {
+    display: block;
+  }
+  .grid-container--technology > .numbered-title {
+    margin-bottom: 0;
+  }
+
+  .numbered-list > * {
+    width: 80px;
+  }
+  .grid-container--technology {
+    grid-template-columns:
+      minmax(1rem, 1fr) minmax(5rem, 7rem) minmax(0, 35rem) minmax(0, 35rem)
+      minmax(1rem, 1fr);
+    grid-template-areas:
+      '. title title title .'
+      '. tabs content image .'
+      '. . . . .';
+  }
+  .grid-container--technology > *:first-child {
+    grid-column: 2 / span 2;
+  }
+  .grid-container--technology > *:last-child {
+    grid-column: 4 / span 2;
+    justify-self: end;
+  }
+  .grid-container--technology > :not(:last-child) {
+    padding-inline: 0rem;
+  }
+  .grid-container {
+    padding-bottom: 0;
+  }
+  .numbered-list {
+    flex-direction: column;
+    --gap: 2rem;
+    justify-self: start;
+    margin-block: 0;
+  }
+  .technology-info {
+    justify-self: start;
+  }
+  .technology-meta {
+    text-align: left;
   }
 }
