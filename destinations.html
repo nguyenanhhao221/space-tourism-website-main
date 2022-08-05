@@ -12,7 +12,9 @@
     />
     <link rel="stylesheet" href="./public/css/reset.css" />
     <link rel="stylesheet" href="./public/css/index.css" />
-    <script defer src="./js/index.js"></script>
+    <script async src="./js/index.js" type="module"></script>
+    <script async src="./js/helpers.js" type="module"></script>
+    <script async src="./js/destinations.js" type="module"></script>
     <title>Space tourism website</title>
   </head>
   <body class="destination-body">
@@ -45,7 +47,7 @@
           </li>
 
           <li class="active">
-            <a class="numbered-title" href="destination.html">
+            <a class="numbered-title" href="destinations.html">
               <span aria-hidden="true">01</span>Destination
             </a>
           </li>
@@ -68,29 +70,40 @@
       <h1 class="numbered-title">
         <span aria-hidden="true">01</span> Pick your destination
       </h1>
-      <img src="./assets/destination/image-moon.png" alt="The moon" />
+      <picture>
+        <source
+          srcset="./assets/destination/image-moon.webp"
+          type="image/webp"
+        />
+        <img src="./assets/destination/image-moon.png" alt="The moon" />
+      </picture>
+
       <div class="tab-list underline-indicators flex">
         <button
           type="button"
-          class="upper-case ff-sans-cond text-accent bg-dark letter-spacing-2 active"
+          class="upper-case ff-sans-cond text-accent bg-dark letter-spacing-2 active list"
+          id="moon"
         >
           Moon
         </button>
         <button
           type="button"
-          class="upper-case ff-sans-cond text-accent bg-dark letter-spacing-2"
+          class="upper-case ff-sans-cond text-accent bg-dark letter-spacing-2 list"
+          id="mars"
         >
           Mars
         </button>
         <button
           type="button"
-          class="upper-case ff-sans-cond text-accent bg-dark letter-spacing-2"
+          class="upper-case ff-sans-cond text-accent bg-dark letter-spacing-2 list"
+          id="europa"
         >
           Europa
         </button>
         <button
           type="button"
-          class="upper-case ff-sans-cond text-accent bg-dark letter-spacing-2"
+          class="upper-case ff-sans-cond text-accent bg-dark letter-spacing-2 list"
+          id="titan"
         >
           Titan
         </button>
@@ -98,8 +111,8 @@
 
       <article class="text-center flex destination-info">
         <div>
-          <h2 class="ff-serif upper-case fs-800 text-white">Moon</h2>
-          <p class="text-accent ff-sans-normal mw-50ch">
+          <h2 class="ff-serif upper-case fs-800 text-white" id="name">Moon</h2>
+          <p class="text-accent ff-sans-normal mw-50ch" id="description">
             See our planet as you’ve never seen it before. A perfect relaxing
             trip away to help regain perspective and come back refreshed. While
             you’re there, take in some history by visiting the Luna 2 and Apollo
@@ -113,7 +126,7 @@
             >
               Avg. distance
             </h3>
-            <p class="upper-case fs-750 ff-serif">384,400 km</p>
+            <p class="upper-case fs-750 ff-serif" id="distance">384,400 km</p>
           </div>
           <div>
             <h3
@@ -121,7 +134,7 @@
             >
               Est. travel time
             </h3>
-            <p class="upper-case fs-750 ff-serif">3 days</p>
+            <p class="upper-case fs-750 ff-serif" id="travel">3 days</p>
           </div>
         </div>
       </article>

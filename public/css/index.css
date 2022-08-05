@@ -588,7 +588,7 @@ nav ul li {
   grid-area: title;
 }
 
-.grid-container--destination > img {
+.grid-container--destination > picture {
   max-width: 60%;
   grid-area: image;
 }
@@ -626,10 +626,6 @@ article h3 {
     justify-self: start;
     margin-top: clamp(2rem, 5vw, 4.75rem);
   }
-
-  /* article p {
-    padding: 0 4rem;
-  } */
 }
 
 /* Desktop */
@@ -643,7 +639,7 @@ article h3 {
     justify-items: start;
   }
 
-  .grid-container--destination > img {
+  .grid-container--destination > picture {
     max-width: 100%;
   }
   .destination-info {
